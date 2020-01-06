@@ -17,7 +17,7 @@ makepdfgui.py : use nuitka.
 ```
 python -m nuitka makepdfgui.py --standalone --recurse-none --remove-output --plugin-enable=tk-inter
 ```
-All output files in the same folder together.
+All output files put in the same folder together.
 
 ## Execute
 
@@ -49,6 +49,6 @@ https://onedrive.live.com/download.aspx/pub/makepdfGUI.zip?cid=563E2C9BCE80B408
 
 Licence for makepdfgui.py is CC.
 
-Other files are original source code licenses. 
+Other files follow original source code licenses. 
 
 2020.1.6 ENDO Michiaki
