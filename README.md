@@ -47,7 +47,7 @@ https://onedrive.live.com/download.aspx/pub/makepdfGUI.zip?cid=563E2C9BCE80B408
 
 ## License
 
-Licence for makedpfgui.py is CC.
+Licence for makepdfgui.py is CC.
 
 Other files are original source code licenses. 
 
