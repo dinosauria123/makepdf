@@ -41,6 +41,10 @@ hocr-pdf.py:https://github.com/tmbdev/hocr-tools/blob/master/hocr-pdf
 
 gcvocr.py: shown at https://www.g104robo.com/entry/google-cloud-vision-api slightly modified.
 
+## Windows binary download
+
+https://onedrive.live.com/download.aspx/pub/makepdfGUI.zip?cid=563E2C9BCE80B408
+
 ## License
 
 Licence for makedpfgui.py is CC.
