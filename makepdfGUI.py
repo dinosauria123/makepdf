@@ -2,7 +2,7 @@
 
 import tkinter as tk
 from tkinter import filedialog,messagebox
-import os, signal
+import os
 import subprocess
 import glob
 import threading
