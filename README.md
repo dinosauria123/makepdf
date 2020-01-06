@@ -4,6 +4,7 @@ Make a searchable pdf via Google Cloud Vision OCR
 ## Compile
 
 gcv2hocr.c : use MingW64.
+
 gcvocr.py : use nuitka.
 ```
 python -m nuitka gcvocr.py --standalone --recurse-none --remove-output --plugin-enable=qt-plugins --recurse-to=requests --recurse-to=urllib3 --recurse-to=chardet --recurse-to=certifi --recurse-to=idna --recurse-to=PIL
@@ -21,8 +22,11 @@ All output files in the same folder together.
 ## Execute
 
 Double click makepdfgui.exe.
+
 Set Google API Key via press "Config" button.
+
 Select input image file directry via press "Set IMG dir" button.
+
 Wait until "Done" is shown.
 
 ## Requrements for image datas
@@ -40,6 +44,7 @@ gcvocr.py: shown at https://www.g104robo.com/entry/google-cloud-vision-api sligh
 ## License
 
 Licence for makedpfgui.py is CC.
+
 Other files are original source code licenses. 
 
 2020.1.6 ENDO Michiaki
