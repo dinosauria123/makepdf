@@ -12,6 +12,8 @@ from PIL import Image
 args = sys.argv
 
 filename = args[1]
+APIKEY = args[2]
+savedir = args[3]
 
 def pil_image_to_base64(pil_image):
     buffered = BytesIO()
@@ -22,7 +24,7 @@ def pil_image_to_base64(pil_image):
 def recognize_image(pil_image):
         str_encode_file = pil_image_to_base64(pil_image)
         str_url = "https://vision.googleapis.com/v1/images:annotate?key="
-        str_api_key = args[2]
+        str_api_key = APIKEY
         str_headers = {"Content-Type": "application/json"}
         str_json_data = {
             "requests": [
@@ -53,7 +55,7 @@ def recognize_image(pil_image):
                                         )
 
         if obj_response.status_code == 200:
-            with codecs.open(args[1] + ".json", "w", "utf-8") as outfile:
+            with codecs.open(savedir + "/" + os.path.basename(filename) + ".json", "w", "utf-8") as outfile:
                 dump=json.dumps(obj_response.json(), indent=2, ensure_ascii=False)
                 outfile.write(dump)
                 
