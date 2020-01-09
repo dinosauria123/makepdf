@@ -25,6 +25,8 @@ Double click makepdfgui.exe.
 
 Set Google API Key via press "Config" button.
 
+Set output pdf file via press "Set pdf file" button.
+
 Select input image file directry via press "Set IMG dir" button.
 
 Wait until "Done" is shown.
