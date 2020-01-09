@@ -54,9 +54,9 @@ class Application(tk.Frame):
         t.geometry("350x100")
         t.wm_title("API KEY Config")
         l = tk.Label(t, text="Set Google API key")
-        l.place(x=100, y=5)
-        text = tk.Entry(t, width=20)
-        text.place(x=90, y=30)
+        l.place(x=110, y=5)
+        text = tk.Entry(t, width=50)
+        text.place(x=20, y=30)
         button3 = tk.Button(t)
         button3.place(x=150, y=60)
         button3["text"] = "Save"
@@ -65,7 +65,7 @@ class Application(tk.Frame):
     def makepdf(self):
 
         if pdffile=="":
-            messagebox.showerror("Error", 'Set pdf file before set images')
+            messagebox.showerror("Error", "Set pdf file before set images")
             self.savepdf()
             sys.exit(1)
 
@@ -83,17 +83,17 @@ class Application(tk.Frame):
             with open(confpath) as f:
                 APIKEY = f.read()
         except FileNotFoundError:
-            messagebox.showerror("Error", 'No config file, Input your API key')
+            messagebox.showerror("Error", "No config file, Input your API key")
             self.create_window()
             sys.exit(1)
 
         if APIKEY == "":
-            messagebox.showerror("Error", 'No API key, Input your API key')
+            messagebox.showerror("Error", "No API key, Input your API key")
             self.create_window()
             sys.exit(1)
         
         if savedir == "":
-            messagebox.showerror("Error", 'Set output pdf folder')
+            messagebox.showerror("Error", "Set output pdf file")
             self.savepdf()
             sys.exit(1)
 
@@ -118,7 +118,6 @@ class Application(tk.Frame):
         command = [hocr_pdf, "--savefile", pdffile, imgdir]
         subprocess.call(command)
         move_glob(savedir + "/temp/", imgdir + "/*.hocr")
-        move_glob(savedir + "/temp/", imgdir + "/*.txt")
         move_glob(savedir + "/temp/", ntpath.dirname(__file__) + "/preout*.txt")        
 
         print("Done!")
@@ -140,13 +139,13 @@ class Application(tk.Frame):
             t.destroy()
             sys.exit(1)
         path = ntpath.dirname(__file__)+"/config.txt"
-        with open(path, mode='w') as f:
+        with open(path, mode="w") as f:
             f.write(ctext)
         t.destroy()
 
     def savepdf(self):
         global pdffile, savedir
-        pdffile = filedialog.asksaveasfilename(filetypes = [("pdf file",'*.pdf')], initialdir = dir)        
+        pdffile = filedialog.asksaveasfilename(filetypes = [("pdf file","*.pdf")], initialdir = dir)        
         savedir = ntpath.dirname(pdffile)
         os.mkdir(savedir + "/temp")
 
