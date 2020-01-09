@@ -20,6 +20,7 @@ https://www.g104robo.com/entry/google-cloud-vision-api
 
 ・使い方
 
+Set pdf fileボタンを押してpdfファイルを作るフォルダを選択。
 Set IMG dirボタンを押して画像ファイルのあるフォルダを選択。
 Google Cloud Visionに画像を送信し、OCRをおこない検索可能pdfを生成する。
 画像一枚のサイズが大きいと、一枚当たり分単位の時間がかかる。
